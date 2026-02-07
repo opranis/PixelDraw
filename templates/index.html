@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+  
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}"">
+
+  <title>Pixel Paint Mobile</title>
+</head>
+<body>
+  <div id="toolbar">
+    <input type="color" id="colorPicker" value="#FF0000">
+    <label for="brushSize">Brush</label>
+    <input type="range" id="brushSize" min="1" max="8" value="1">
+    <button id="brushBtn" class="active">Brush</button>
+    <button id="fillBtn">Fill</button>
+    <button id="clearBtn">Clear</button>
+    <button id="exportBtn">Export</button>
+  </div>
+
+  <div id="canvasContainer">
+    <canvas id="canvas" width="64" height="64"></canvas>
+  </div>
+
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
