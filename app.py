@@ -87,6 +87,6 @@ def save_file():
         return jsonify({'message': f'Server error: Could not save file.'}), 500
 
 # --- Run the application ---
-if __name__ == '__main__':
-    # Running on localhost port 5000 by default
-    app.run(host="0.0.0.0", debug=True)
+# if __name__ == '__main__':
+#     # Running on localhost port 5000 by default
+#     app.run(host="0.0.0.0", debug=True)
