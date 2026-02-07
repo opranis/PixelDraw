@@ -178,12 +178,17 @@ function exportToText() {
     output.pixels.push(row);
   }
 
+  output.name = prompt("Please enter your name!");
+  output.date = new Date().toLocaleDateString(undefined, {year: 'numeric', month: 'long', day: 'numeric'});
+
   fetch('/save-file', {
     method: "POST", 
     headers: {
       "Content-Type": "application/json"
     },
-    body: JSON.stringify(output)})
+    body: JSON.stringify(output)});
+
+  alert("Thank you!")
 
 }
 
